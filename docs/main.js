@@ -44,6 +44,8 @@ const translations = {
         demo_note2_desc: "The root agent triggers two isolated sub-agents concurrently: one audits inventory records, while the other reviews scheduling data.",
         demo_note3_title: "Final Synthesis",
         demo_note3_desc: "Once the sub-agents return their focused findings, the root agent synthesizes the context into a cohesive, actionable operational brief.",
+        demo_output_label: "Execution Output (Abridged)",
+        demo_output_text: "## Weekend Market Operations Brief\n\n### Inventory Status\n- Strawberries: 🔴 SOLD OUT (Restock before Sat 08:00)\n- Ice bags: ⚠️ 3 remaining (Same-day restock)\n- Mint leaves: ⚠️ LOW\n\n### Staffing Status\n- Saturday: Alice/Ben overwhelmed after 11:30 when Cara leaves.\n- Sunday: Single point of failure if Flo can't attend.\n\n### Immediate Actions\n[P0] Procure strawberries (Sat 08:00)\n[P0] Restock ice bags (Friday)\n[P1] Recruit Saturday lunch coverage (Friday EOD)",
 
         links_tag: "Key files",
         links_title: "Open the code paths that matter most.",
@@ -100,6 +102,8 @@ const translations = {
         demo_note2_desc: "主智能体触发两个逻辑隔离的节点并发执行：一组负责清点并校验库存状态，另一组分析人员调度与排班。",
         demo_note3_title: "信息降维与融合总结",
         demo_note3_desc: "主控节点高效提取各子系统输出的报告进行降维融合，生成一份包含明确 Action Items（行动项）的业务简报。",
+        demo_output_label: "真实执行输出 (摘要)",
+        demo_output_text: "## 周末集市运营简报\n\n### 库存状态\n- 草莓 (Strawberries): 🔴 已售罄 (需在周六 08:00 前补货)\n- 冰袋 (Ice bags): ⚠️ 仅剩 3 袋 (需当日补货)\n- 薄荷叶 (Mint leaves): ⚠️ 存量预警\n\n### 人员缺口状态\n- 周六: Cara 11:30 离岗后，Alice/Ben 将面临午高峰运算压力。\n- 周日: Flo 独自负责清理，无替补人员存在单点故障风险。\n\n### 行动项 (Action Items)\n[P0] 采购草莓 (截止: 周六 08:00)\n[P0] 补充冰袋 (截止: 周五当日)\n[P1] 招募周六午高峰替补人员 (截止: 周五下班前)",
 
         links_tag: "关键源代码",
         links_title: "深入研读系统底层的核心模块源码。",
