@@ -15,6 +15,11 @@
 项目展示页面：
 [https://sansanyuchen.github.io/claude-code-python/](https://sansanyuchen.github.io/claude-code-python/)
 
+作者信息：
+- 王煜晨
+- Wangyuchen
+- wangyuc@mail.ustc.edu.cn
+
 ## 功能特性
 
 - 多步 agent loop 与工具调用

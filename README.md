@@ -15,6 +15,11 @@ For Chinese documentation, see [README_zh.md](README_zh.md).
 Project showcase page:
 [https://sansanyuchen.github.io/claude-code-python/](https://sansanyuchen.github.io/claude-code-python/)
 
+Author:
+- Yuchen Wang
+- Wangyuchen
+- wangyuc@mail.ustc.edu.cn
+
 ## Features
 
 - Multi-step agent loop with tool calling
