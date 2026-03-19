@@ -6,187 +6,179 @@
     <title>Claude Code Python</title>
     <meta
       name="description"
-      content="Claude Code Python project showcase: runtime architecture, task-based sub-agents, and live demo flow."
+      content="Claude Code Python showcase: runtime architecture, task-based delegation, and a live sub-agent demo."
     >
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
-      href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&family=Instrument+Serif:ital@0;1&display=swap"
+      href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap"
       rel="stylesheet"
     >
     <link rel="stylesheet" href="./styles.css">
   </head>
   <body>
-    <div class="page-shell">
-      <header class="hero" id="top">
-        <nav class="topbar">
+    <div class="site">
+      <header class="hero">
+        <div class="topbar">
           <a class="brand" href="#top">Claude Code Python</a>
           <div class="topbar-actions">
-            <a class="topbar-link" href="https://github.com/sansanyuchen/claude-code-python" target="_blank" rel="noreferrer">GitHub</a>
-            <button id="language-toggle" class="language-toggle" type="button">中文</button>
+            <a class="ghost-button" href="https://github.com/sansanyuchen/claude-code-python" target="_blank" rel="noreferrer">GitHub</a>
+            <button id="language-toggle" class="ghost-button" type="button">中文</button>
           </div>
-        </nav>
+        </div>
 
-        <div class="hero-grid">
+        <div class="hero-panel" id="top">
           <div class="hero-copy">
-            <p class="eyebrow" data-i18n="hero.eyebrow">Python agent runtime</p>
-            <h1 data-i18n="hero.title">A compact Claude Code style runtime focused on tools and sub-agents.</h1>
-            <p class="hero-summary" data-i18n="hero.summary">
-              This project implements the functional core of a coding agent: a multi-step runtime, tool calling,
-              the `task` tool for delegation, and a live demo that shows how work can be split across sub-agents.
+            <p class="hero-tag" data-i18n="hero.tag">PYTHON AGENT RUNTIME</p>
+            <h1 data-i18n="hero.title">A clean Claude Code style runtime built around tools, loops, and sub-agents.</h1>
+            <p class="hero-text" data-i18n="hero.text">
+              This project focuses on the functional core of a coding agent: a multi-step runtime, tool calling,
+              the `task` tool for delegation, and a simple live demo that makes the sub-agent flow easy to inspect.
             </p>
+          </div>
 
-            <div class="hero-actions">
-              <a class="primary-button" href="#architecture" data-i18n="hero.primary">See Architecture</a>
-              <a class="secondary-button" href="#demo" data-i18n="hero.secondary">See Demo</a>
+          <div class="hero-metrics">
+            <div class="metric">
+              <span class="metric-value">Runtime</span>
+              <span class="metric-label" data-i18n="hero.metric1">multi-step loop</span>
+            </div>
+            <div class="metric">
+              <span class="metric-value">Task</span>
+              <span class="metric-label" data-i18n="hero.metric2">sub-agent delegation</span>
+            </div>
+            <div class="metric">
+              <span class="metric-value">Tools</span>
+              <span class="metric-label" data-i18n="hero.metric3">workspace-safe actions</span>
             </div>
           </div>
-
-          <aside class="hero-panel">
-            <p class="panel-label" data-i18n="hero.panelLabel">At a glance</p>
-            <ul class="panel-list">
-              <li data-i18n="hero.panel1">Multi-step runtime loop</li>
-              <li data-i18n="hero.panel2">OpenAI-compatible model layer</li>
-              <li data-i18n="hero.panel3">Parallel tool execution</li>
-              <li data-i18n="hero.panel4">`task`-based sub-agent delegation</li>
-            </ul>
-          </aside>
         </div>
       </header>
 
       <main>
-        <section class="section">
-          <div class="section-heading narrow">
-            <p class="section-kicker" data-i18n="capabilities.kicker">Core capabilities</p>
-            <h2 data-i18n="capabilities.title">The three ideas this project is built around</h2>
+        <section class="section section-grid">
+          <div class="section-label">
+            <p data-i18n="overview.label">Overview</p>
           </div>
-
-          <div class="capability-grid">
-            <article class="capability-card">
-              <span class="capability-index">01</span>
-              <h3 data-i18n="capabilities.card1.title">Runtime loop</h3>
-              <p data-i18n="capabilities.card1.body">
-                The root agent keeps cycling through model output, tool execution, and tool-result feedback until the task is complete.
-              </p>
-            </article>
-            <article class="capability-card">
-              <span class="capability-index">02</span>
-              <h3 data-i18n="capabilities.card2.title">Tool calling</h3>
-              <p data-i18n="capabilities.card2.body">
-                Filesystem, search, shell, and todo tools are exposed through a consistent registry and run within a workspace boundary.
-              </p>
-            </article>
-            <article class="capability-card">
-              <span class="capability-index">03</span>
-              <h3 data-i18n="capabilities.card3.title">Sub-agent delegation</h3>
-              <p data-i18n="capabilities.card3.body">
-                The `task` tool can fan work out into sub-agents, run them in parallel, and gather their results back into the root flow.
-              </p>
-            </article>
-          </div>
-        </section>
-
-        <section class="section" id="architecture">
-          <div class="section-heading">
-            <p class="section-kicker" data-i18n="architecture.kicker">Architecture</p>
-            <h2 data-i18n="architecture.title">How one request moves through the system</h2>
-          </div>
-
-          <div class="architecture-board">
-            <div class="architecture-flow">
-              <article class="flow-card">
-                <span class="flow-index">1</span>
-                <h3 data-i18n="architecture.step1.title">Prompt enters runtime</h3>
-                <p data-i18n="architecture.step1.body">The root agent starts with system prompt, user prompt, tool specs, and workdir context.</p>
+          <div class="section-content">
+            <h2 data-i18n="overview.title">Three core ideas define the project.</h2>
+            <div class="cards cards-3">
+              <article class="card">
+                <h3 data-i18n="overview.card1.title">Agent loop</h3>
+                <p data-i18n="overview.card1.body">The runtime keeps model output, tool execution, and tool-result feedback inside one compact loop.</p>
               </article>
-              <article class="flow-card">
-                <span class="flow-index">2</span>
-                <h3 data-i18n="architecture.step2.title">Model chooses next action</h3>
-                <p data-i18n="architecture.step2.body">It can answer directly or emit tool calls, including a `task` call for delegation.</p>
+              <article class="card">
+                <h3 data-i18n="overview.card2.title">Tool system</h3>
+                <p data-i18n="overview.card2.body">Filesystem, shell, search, and todo tools are registered through one consistent interface.</p>
               </article>
-              <article class="flow-card">
-                <span class="flow-index">3</span>
-                <h3 data-i18n="architecture.step3.title">Tools execute and return results</h3>
-                <p data-i18n="architecture.step3.body">Tool calls run, their outputs are captured, and the conversation continues from there.</p>
-              </article>
-              <article class="flow-card">
-                <span class="flow-index">4</span>
-                <h3 data-i18n="architecture.step4.title">Sub-agents branch and merge</h3>
-                <p data-i18n="architecture.step4.body">If `task` is used, sub-agents run through the same runtime and return compact results to the root agent.</p>
-              </article>
-            </div>
-
-            <div class="module-strip">
-              <article class="module-chip">
-                <p class="module-path">runtime.py</p>
-                <p data-i18n="architecture.module1">Owns the loop and orchestration.</p>
-              </article>
-              <article class="module-chip">
-                <p class="module-path">task.py</p>
-                <p data-i18n="architecture.module2">Handles delegation, timeout, and depth control.</p>
-              </article>
-              <article class="module-chip">
-                <p class="module-path">filesystem.py</p>
-                <p data-i18n="architecture.module3">Provides workspace-safe tools.</p>
+              <article class="card">
+                <h3 data-i18n="overview.card3.title">Sub-agents</h3>
+                <p data-i18n="overview.card3.body">The `task` tool can split work into parallel sub-agents and merge their outputs back into the root run.</p>
               </article>
             </div>
           </div>
         </section>
 
-        <section class="section" id="demo">
-          <div class="section-heading">
-            <p class="section-kicker" data-i18n="demo.kicker">Demo</p>
-            <h2 data-i18n="demo.title">A simple live flow that exposes the core design</h2>
+        <section class="section section-grid" id="architecture">
+          <div class="section-label">
+            <p data-i18n="architecture.label">Architecture</p>
           </div>
+          <div class="section-content">
+            <h2 data-i18n="architecture.title">A request passes through four clear stages.</h2>
+            <div class="flow">
+              <article class="flow-card">
+                <span class="flow-step">01</span>
+                <h3 data-i18n="architecture.step1.title">Root runtime starts</h3>
+                <p data-i18n="architecture.step1.body">The agent begins with the system prompt, user prompt, tool specs, and workdir context.</p>
+              </article>
+              <article class="flow-card">
+                <span class="flow-step">02</span>
+                <h3 data-i18n="architecture.step2.title">Model chooses action</h3>
+                <p data-i18n="architecture.step2.body">It can answer directly or emit tool calls, including a `task` call.</p>
+              </article>
+              <article class="flow-card">
+                <span class="flow-step">03</span>
+                <h3 data-i18n="architecture.step3.title">Tools execute</h3>
+                <p data-i18n="architecture.step3.body">Tool results are collected and written back into the conversation state.</p>
+              </article>
+              <article class="flow-card">
+                <span class="flow-step">04</span>
+                <h3 data-i18n="architecture.step4.title">Sub-agents merge back</h3>
+                <p data-i18n="architecture.step4.body">If `task` is used, sub-agents run through the same runtime and return focused outputs.</p>
+              </article>
+            </div>
 
-          <div class="demo-board">
-            <div class="demo-main">
-              <div class="command-card">
-                <p class="panel-label" data-i18n="demo.commandLabel">Run command</p>
+            <div class="module-board">
+              <article class="module-card">
+                <p class="module-path">src/claude_code_python/runtime.py</p>
+                <p data-i18n="architecture.module1">Owns the loop, tool orchestration, and response handoff.</p>
+              </article>
+              <article class="module-card">
+                <p class="module-path">src/claude_code_python/tools/task.py</p>
+                <p data-i18n="architecture.module2">Handles delegation, timeout control, and bounded depth.</p>
+              </article>
+              <article class="module-card">
+                <p class="module-path">src/claude_code_python/tools/filesystem.py</p>
+                <p data-i18n="architecture.module3">Provides workspace-safe file operations for the agent.</p>
+              </article>
+            </div>
+          </div>
+        </section>
+
+        <section class="section section-grid" id="demo">
+          <div class="section-label">
+            <p data-i18n="demo.label">Demo</p>
+          </div>
+          <div class="section-content">
+            <h2 data-i18n="demo.title">The live demo is small on purpose, so the delegation path is easy to understand.</h2>
+
+            <div class="demo-shell">
+              <div class="command-block">
+                <p class="command-label" data-i18n="demo.commandLabel">Run command</p>
                 <pre><code>source ~/.ccpy_env
 PYTHONPATH=src .venv/bin/python examples/run_subagent_demo_live.py</code></pre>
               </div>
 
-              <div class="demo-summary-card">
-                <p class="panel-label" data-i18n="demo.summaryLabel">What the prompt asks for</p>
-                <p data-i18n="demo.summaryBody">
-                  The root agent must call `task`, launch two sub-agents, inspect inventory and staffing files, and merge the outputs into one brief.
-                </p>
+              <div class="demo-notes">
+                <article class="note-card">
+                  <h3 data-i18n="demo.note1.title">Prompt constraint</h3>
+                  <p data-i18n="demo.note1.body">The root agent is explicitly asked to call `task` before doing direct analysis itself.</p>
+                </article>
+                <article class="note-card">
+                  <h3 data-i18n="demo.note2.title">Task split</h3>
+                  <p data-i18n="demo.note2.body">Two sub-agents inspect different files: one for inventory, one for staffing.</p>
+                </article>
+                <article class="note-card">
+                  <h3 data-i18n="demo.note3.title">Final result</h3>
+                  <p data-i18n="demo.note3.body">The root agent merges both outputs into one short operational brief with immediate actions.</p>
+                </article>
               </div>
-            </div>
-
-            <div class="demo-steps">
-              <article class="step-row">
-                <span class="step-badge">01</span>
-                <p data-i18n="demo.step1">Root agent receives a short operational brief task.</p>
-              </article>
-              <article class="step-row">
-                <span class="step-badge">02</span>
-                <p data-i18n="demo.step2">The model is expected to call `task` instead of reading everything directly.</p>
-              </article>
-              <article class="step-row">
-                <span class="step-badge">03</span>
-                <p data-i18n="demo.step3">Two sub-agents inspect different files and return focused summaries.</p>
-              </article>
-              <article class="step-row">
-                <span class="step-badge">04</span>
-                <p data-i18n="demo.step4">The root agent merges the outputs into one final brief and traceable run.</p>
-              </article>
             </div>
           </div>
         </section>
 
-        <section class="section section-footer">
-          <div class="footer-card">
-            <div>
-              <p class="section-kicker" data-i18n="footer.kicker">Links</p>
-              <h2 data-i18n="footer.title">Project files worth opening next</h2>
-            </div>
-            <div class="footer-links">
-              <a href="https://github.com/sansanyuchen/claude-code-python/blob/main/src/claude_code_python/runtime.py" target="_blank" rel="noreferrer">runtime.py</a>
-              <a href="https://github.com/sansanyuchen/claude-code-python/blob/main/src/claude_code_python/tools/task.py" target="_blank" rel="noreferrer">task.py</a>
-              <a href="https://github.com/sansanyuchen/claude-code-python/blob/main/examples/run_subagent_demo_live.py" target="_blank" rel="noreferrer">run_subagent_demo_live.py</a>
-              <a href="https://github.com/sansanyuchen/claude-code-python" target="_blank" rel="noreferrer" data-i18n="footer.repo">Open GitHub repository</a>
+        <section class="section section-grid section-links">
+          <div class="section-label">
+            <p data-i18n="links.label">Links</p>
+          </div>
+          <div class="section-content">
+            <h2 data-i18n="links.title">Open the code paths that matter most.</h2>
+            <div class="links-grid">
+              <a class="link-card" href="https://github.com/sansanyuchen/claude-code-python/blob/main/src/claude_code_python/runtime.py" target="_blank" rel="noreferrer">
+                <span class="link-card-path">runtime.py</span>
+                <span data-i18n="links.card1">Core agent loop</span>
+              </a>
+              <a class="link-card" href="https://github.com/sansanyuchen/claude-code-python/blob/main/src/claude_code_python/tools/task.py" target="_blank" rel="noreferrer">
+                <span class="link-card-path">task.py</span>
+                <span data-i18n="links.card2">Sub-agent delegation</span>
+              </a>
+              <a class="link-card" href="https://github.com/sansanyuchen/claude-code-python/blob/main/examples/run_subagent_demo_live.py" target="_blank" rel="noreferrer">
+                <span class="link-card-path">run_subagent_demo_live.py</span>
+                <span data-i18n="links.card3">Live demo entry</span>
+              </a>
+              <a class="link-card" href="https://github.com/sansanyuchen/claude-code-python" target="_blank" rel="noreferrer">
+                <span class="link-card-path" data-i18n="links.card4path">Repository</span>
+                <span data-i18n="links.card4">Full project on GitHub</span>
+              </a>
             </div>
           </div>
         </section>
