@@ -12,6 +12,9 @@ This project focuses on the runtime side of a coding agent rather than UI parity
 
 For Chinese documentation, see [README_zh.md](README_zh.md).
 
+Project showcase page:
+[https://sansanyuchen.github.io/claude-code-python/](https://sansanyuchen.github.io/claude-code-python/)
+
 ## Features
 
 - Multi-step agent loop with tool calling

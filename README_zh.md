@@ -12,6 +12,9 @@
 
 英文说明见 [README.md](README.md)。
 
+项目展示页面：
+[https://sansanyuchen.github.io/claude-code-python/](https://sansanyuchen.github.io/claude-code-python/)
+
 ## 功能特性
 
 - 多步 agent loop 与工具调用
