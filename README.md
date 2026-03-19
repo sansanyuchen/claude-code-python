@@ -10,7 +10,7 @@ This project focuses on the runtime side of a coding agent rather than UI parity
 - parallel execution,
 - and an extensible Python tool architecture.
 
-For Chinese documentation, see [README_zh.md](/Users/sansan/Desktop/Claude_code_space/claude_python/README_zh.md).
+For Chinese documentation, see [README_zh.md](README_zh.md).
 
 ## Features
 
@@ -26,18 +26,18 @@ For Chinese documentation, see [README_zh.md](/Users/sansan/Desktop/Claude_code_
 
 ### Runtime
 
-- [runtime.py](/Users/sansan/Desktop/Claude_code_space/claude_python/src/claude_code_python/runtime.py) manages the agent loop, model responses, tool dispatch, and tool-result feedback
+- [runtime.py](src/claude_code_python/runtime.py) manages the agent loop, model responses, tool dispatch, and tool-result feedback
 
 ### Model Layer
 
-- [model.py](/Users/sansan/Desktop/Claude_code_space/claude_python/src/claude_code_python/model.py) wraps an OpenAI-compatible chat completion backend
+- [model.py](src/claude_code_python/model.py) wraps an OpenAI-compatible chat completion backend
 
 ### Tools
 
-- [tools/base.py](/Users/sansan/Desktop/Claude_code_space/claude_python/src/claude_code_python/tools/base.py) defines the tool abstraction and registry
-- [tools/task.py](/Users/sansan/Desktop/Claude_code_space/claude_python/src/claude_code_python/tools/task.py) implements sub-agent delegation, timeout control, and bounded recursion
-- [tools/filesystem.py](/Users/sansan/Desktop/Claude_code_space/claude_python/src/claude_code_python/tools/filesystem.py) provides workspace-safe file operations
-- [tools/bash.py](/Users/sansan/Desktop/Claude_code_space/claude_python/src/claude_code_python/tools/bash.py) provides shell command execution
+- [tools/base.py](src/claude_code_python/tools/base.py) defines the tool abstraction and registry
+- [tools/task.py](src/claude_code_python/tools/task.py) implements sub-agent delegation, timeout control, and bounded recursion
+- [tools/filesystem.py](src/claude_code_python/tools/filesystem.py) provides workspace-safe file operations
+- [tools/bash.py](src/claude_code_python/tools/bash.py) provides shell command execution
 
 ## Installation
 
@@ -95,11 +95,11 @@ It asks the root agent to:
 
 ### Demo Files
 
-- [run_subagent_demo_live.py](/Users/sansan/Desktop/Claude_code_space/claude_python/examples/run_subagent_demo_live.py)
-- [subagent_demo_live_prompt.txt](/Users/sansan/Desktop/Claude_code_space/claude_python/examples/subagent_demo_live_prompt.txt)
-- [subagent_demo_live_prompt_zh.txt](/Users/sansan/Desktop/Claude_code_space/claude_python/examples/subagent_demo_live_prompt_zh.txt)
-- [task_demo_prompt.txt](/Users/sansan/Desktop/Claude_code_space/claude_python/examples/task_demo_prompt.txt)
-- [task_demo_prompt_zh.txt](/Users/sansan/Desktop/Claude_code_space/claude_python/examples/task_demo_prompt_zh.txt)
+- [run_subagent_demo_live.py](examples/run_subagent_demo_live.py)
+- [subagent_demo_live_prompt.txt](examples/subagent_demo_live_prompt.txt)
+- [subagent_demo_live_prompt_zh.txt](examples/subagent_demo_live_prompt_zh.txt)
+- [task_demo_prompt.txt](examples/task_demo_prompt.txt)
+- [task_demo_prompt_zh.txt](examples/task_demo_prompt_zh.txt)
 
 ### Demo Command
 

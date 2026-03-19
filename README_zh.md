@@ -10,7 +10,7 @@
 - 并行执行
 - 可扩展的 Python 工具架构
 
-英文说明见 [README.md](/Users/sansan/Desktop/Claude_code_space/claude_python/README.md)。
+英文说明见 [README.md](README.md)。
 
 ## 功能特性
 
@@ -26,18 +26,18 @@
 
 ### Runtime
 
-- [runtime.py](/Users/sansan/Desktop/Claude_code_space/claude_python/src/claude_code_python/runtime.py) 负责 agent loop、模型响应、工具分发和工具结果回填
+- [runtime.py](src/claude_code_python/runtime.py) 负责 agent loop、模型响应、工具分发和工具结果回填
 
 ### Model Layer
 
-- [model.py](/Users/sansan/Desktop/Claude_code_space/claude_python/src/claude_code_python/model.py) 封装 OpenAI 兼容的 chat completion 后端
+- [model.py](src/claude_code_python/model.py) 封装 OpenAI 兼容的 chat completion 后端
 
 ### Tools
 
-- [tools/base.py](/Users/sansan/Desktop/Claude_code_space/claude_python/src/claude_code_python/tools/base.py) 定义工具抽象和注册机制
-- [tools/task.py](/Users/sansan/Desktop/Claude_code_space/claude_python/src/claude_code_python/tools/task.py) 实现 subagent 委派、超时控制和递归深度限制
-- [tools/filesystem.py](/Users/sansan/Desktop/Claude_code_space/claude_python/src/claude_code_python/tools/filesystem.py) 提供工作区安全的文件操作
-- [tools/bash.py](/Users/sansan/Desktop/Claude_code_space/claude_python/src/claude_code_python/tools/bash.py) 提供 shell 命令执行
+- [tools/base.py](src/claude_code_python/tools/base.py) 定义工具抽象和注册机制
+- [tools/task.py](src/claude_code_python/tools/task.py) 实现 subagent 委派、超时控制和递归深度限制
+- [tools/filesystem.py](src/claude_code_python/tools/filesystem.py) 提供工作区安全的文件操作
+- [tools/bash.py](src/claude_code_python/tools/bash.py) 提供 shell 命令执行
 
 ## 安装
 
@@ -95,11 +95,11 @@ ccpy chat
 
 ### Demo 文件
 
-- [run_subagent_demo_live.py](/Users/sansan/Desktop/Claude_code_space/claude_python/examples/run_subagent_demo_live.py)
-- [subagent_demo_live_prompt.txt](/Users/sansan/Desktop/Claude_code_space/claude_python/examples/subagent_demo_live_prompt.txt)
-- [subagent_demo_live_prompt_zh.txt](/Users/sansan/Desktop/Claude_code_space/claude_python/examples/subagent_demo_live_prompt_zh.txt)
-- [task_demo_prompt.txt](/Users/sansan/Desktop/Claude_code_space/claude_python/examples/task_demo_prompt.txt)
-- [task_demo_prompt_zh.txt](/Users/sansan/Desktop/Claude_code_space/claude_python/examples/task_demo_prompt_zh.txt)
+- [run_subagent_demo_live.py](examples/run_subagent_demo_live.py)
+- [subagent_demo_live_prompt.txt](examples/subagent_demo_live_prompt.txt)
+- [subagent_demo_live_prompt_zh.txt](examples/subagent_demo_live_prompt_zh.txt)
+- [task_demo_prompt.txt](examples/task_demo_prompt.txt)
+- [task_demo_prompt_zh.txt](examples/task_demo_prompt_zh.txt)
 
 ### Demo 运行命令
 
