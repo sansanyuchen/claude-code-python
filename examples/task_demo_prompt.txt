@@ -1,0 +1,7 @@
+Use the task tool to do the following in parallel:
+
+1. List the top-level files and directories.
+2. Find all Python files and group them by folder.
+3. Read README.md and summarize the project goals.
+
+When all sub-agents finish, merge the results into one concise report.

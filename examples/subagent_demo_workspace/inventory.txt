@@ -1,0 +1,14 @@
+Weekend Market Inventory
+========================
+
+Lemonade concentrate: 12 packs
+Paper cups: 20 sleeves
+Ice bags: 3
+Strawberries: SOLD OUT
+Mint leaves: LOW
+Sugar syrup: 2 bottles
+
+Priority notes:
+- Buy strawberries before Saturday 08:00.
+- Refill mint leaves if expected visitors exceed 150.
+- Ice bags below 4 means a same-day restock is recommended.

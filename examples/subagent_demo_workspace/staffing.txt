@@ -1,0 +1,17 @@
+Weekend Market Staffing
+=======================
+
+Saturday:
+- Alice: setup + cashier
+- Ben: drinks station
+- Cara: unavailable after 11:30
+
+Sunday:
+- Alice: cashier
+- Dev: drinks station
+- Flo: cleanup only
+
+Open tasks:
+- Need one extra person for Saturday lunch rush.
+- Need a backup cleanup volunteer for Sunday.
+- Setup starts at 08:30 each day.

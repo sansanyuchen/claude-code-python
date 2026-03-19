@@ -1,0 +1,23 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "claude-code-python"
+version = "0.1.0"
+description = "A Claude Code style multi-agent coding assistant implemented in Python."
+readme = "README.md"
+requires-python = ">=3.9"
+dependencies = [
+  "openai>=1.40.0",
+  "prompt_toolkit>=3.0.43",
+]
+
+[project.scripts]
+ccpy = "claude_code_python.cli:main"
+
+[tool.setuptools]
+package-dir = {"" = "src"}
+
+[tool.setuptools.packages.find]
+where = ["src"]

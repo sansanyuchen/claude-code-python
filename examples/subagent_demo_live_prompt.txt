@@ -1,0 +1,16 @@
+Prepare a one-page weekend market operations brief from the files in the current workspace.
+
+This is a subagent capability demo. You must call the `task` tool before doing any direct file analysis yourself.
+
+Use the `task` tool to launch exactly two parallel sub-agents:
+
+1. One sub-agent should inspect `inventory.txt` and return a concise inventory summary with risks and restock priorities.
+2. One sub-agent should inspect `staffing.txt` and return a concise staffing summary with coverage gaps and immediate actions.
+
+After both sub-agents finish, merge their results into one final brief with these sections:
+
+- Inventory status
+- Staffing status
+- Immediate actions
+
+Keep the final answer concise and operational.
