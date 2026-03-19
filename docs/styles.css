@@ -133,15 +133,28 @@ a {
 
 .eyebrow,
 .section-tag,
-.module-path,
-.command-label,
-.link-path {
+.command-label {
     display: inline-block;
     font-family: 'IBM Plex Mono', monospace;
     font-size: 0.78rem;
     letter-spacing: 0.08em;
     text-transform: uppercase;
     color: var(--muted);
+}
+
+.module-path,
+.link-path {
+    display: inline-block;
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 0.82rem;
+    color: var(--accent-2);
+    background: rgba(124, 224, 195, 0.08);
+    border: 1px solid rgba(124, 224, 195, 0.15);
+    padding: 6px 12px;
+    border-radius: 6px;
+    margin-bottom: 12px;
+    word-break: break-all;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 }
 
 h1, h2, h3 {
@@ -220,6 +233,19 @@ html[lang="zh"] h2 {
     border: 1px solid var(--line);
     border-radius: var(--radius-lg);
     backdrop-filter: blur(10px);
+    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.03), 0 4px 20px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s cubic-bezier(0.2, 0.8, 0.2, 1), border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover,
+.flow-card:hover,
+.module-card:hover,
+.link-card:hover,
+.command-card:hover,
+.note-card:hover {
+    transform: translateY(-4px);
+    border-color: rgba(255, 255, 255, 0.15);
+    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.08), 0 12px 30px rgba(0, 0, 0, 0.35);
 }
 
 .hero-panel {
@@ -372,9 +398,7 @@ code {
     gap: 8px;
 }
 
-.link-path {
-    color: var(--accent-2);
-}
+/* Link path relies on global badge style now */
 
 .footer {
     padding-bottom: 36px;

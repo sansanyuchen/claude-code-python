@@ -128,15 +128,24 @@
             </div>
 
             <div class="demo-layout">
-                <div class="command-card">
-                    <div class="command-card-head">
-                        <span class="dot red"></span>
-                        <span class="dot yellow"></span>
-                        <span class="dot green"></span>
-                        <span class="command-label" data-i18n="command_label">Run command</span>
+                <div class="demo-terminal" style="display: flex; flex-direction: column; gap: 14px;">
+                    <div class="command-card">
+                        <div class="command-card-head">
+                            <span class="command-label" data-i18n="demo_prompt_label">Prompt Input</span>
+                        </div>
+                        <pre><code style="white-space: pre-wrap; font-size: 0.9rem;" data-i18n="demo_prompt_text">Prepare a one-page weekend market operations brief...</code></pre>
                     </div>
-                    <pre><code>source ~/.ccpy_env
+
+                    <div class="command-card">
+                        <div class="command-card-head">
+                            <span class="dot red"></span>
+                            <span class="dot yellow"></span>
+                            <span class="dot green"></span>
+                            <span class="command-label" data-i18n="command_label">Run command</span>
+                        </div>
+                        <pre><code>source ~/.ccpy_env
 PYTHONPATH=src .venv/bin/python examples/run_subagent_demo_live.py</code></pre>
+                    </div>
                 </div>
 
                 <div class="demo-notes">
